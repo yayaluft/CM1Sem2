@@ -4,7 +4,7 @@ public class Peminjaman10 {
     int lamaPinjam;
     int batasPinjam = 5;
     int terlambat;
-    int denda;
+    int denda = 2000;
 
     Peminjaman10(Mahasiswa10 mhs, Buku10 buku, int lamaPinjam) {
         this.mahasiswa = mhs;

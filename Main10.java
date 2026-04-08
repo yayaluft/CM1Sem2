@@ -43,7 +43,9 @@ public class Main10 {
                 sistem.tampilPeminjaman();
                 break;
             case 4:
+                System.out.println("Data diurutkan berdasarkan denda dari tertinggi ke terendah: ");
                 sistem.sortingDenda();
+                sistem.tampilPeminjaman();
                 break;
             case 5:
                 System.out.print("Masukkan NIM yang dicari: ");
