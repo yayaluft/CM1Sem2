@@ -51,9 +51,11 @@ public class Main10 {
                     sistem.tampilPeminjaman();
                     break;
                 case 5:
+                    sc.nextLine();
                     System.out.print("Masukkan NIM yang dicari: ");
                     String nim = sc.nextLine();
                     sistem.binarySearch(nim);
+                    break;
                 case 0:
                     System.out.println("Anda telah keluar.");
                     break;
