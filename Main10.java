@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class Main10 {
     public static void main(String[] args) {
         Scanner sc = new Scanner (System.in);
@@ -22,41 +23,44 @@ public class Main10 {
         };
         PeminjamanBuku10 sistem = new PeminjamanBuku10(listMhs, listBuku, listPinjam);
 
-        System.out.println("=== SISTEM PEMINJAMAN RUANG BACA JTI ===");
-        System.out.println("1. Tampilkan Data Mahasiswa");
-        System.out.println("2. Tampilkan Data Buku");
-        System.out.println("3. Tampilkan Peminjaman ");
-        System.out.println("4. Urutkan Berdasarkan Denda");
-        System.out.println("5. Cari Berdasarkan NIM");
-        System.out.println("0. Keluar");
-        System.out.print("Pilih: ");
-        int menu = sc.nextInt();
-
-        switch (menu) {
-            case 1:
-                sistem.tampilMhs();
-                break;
-            case 2:
-                sistem.tampilBuku();
-                break;
-            case 3:
-                sistem.tampilPeminjaman();
-                break;
-            case 4:
-                System.out.println("Data diurutkan berdasarkan denda dari tertinggi ke terendah: ");
-                sistem.sortingDenda();
-                sistem.tampilPeminjaman();
-                break;
-            case 5:
-                System.out.print("Masukkan NIM yang dicari: ");
-                String nim = sc.nextLine();
-                sistem.binarySearch(nim);
-            case 0:
-                System.out.println("Anda telah keluar.");
-                break;
-            default:
-                System.out.println("Pilihan tidak valid");
-                break;
-        }
+        int menu;
+        do{
+            System.out.println("=== SISTEM PEMINJAMAN RUANG BACA JTI ===");
+            System.out.println("1. Tampilkan Data Mahasiswa");
+            System.out.println("2. Tampilkan Data Buku");
+            System.out.println("3. Tampilkan Peminjaman ");
+            System.out.println("4. Urutkan Berdasarkan Denda");
+            System.out.println("5. Cari Berdasarkan NIM");
+            System.out.println("0. Keluar");
+            System.out.print("Pilih: ");
+            menu = sc.nextInt();
+    
+            switch (menu) {
+                case 1:
+                    sistem.tampilMhs();
+                    break;
+                case 2:
+                    sistem.tampilBuku();
+                    break;
+                case 3:
+                    sistem.tampilPeminjaman();
+                    break;
+                case 4:
+                    System.out.println("Data diurutkan berdasarkan denda dari tertinggi ke terendah: ");
+                    sistem.sortingDenda();
+                    sistem.tampilPeminjaman();
+                    break;
+                case 5:
+                    System.out.print("Masukkan NIM yang dicari: ");
+                    String nim = sc.nextLine();
+                    sistem.binarySearch(nim);
+                case 0:
+                    System.out.println("Anda telah keluar.");
+                    break;
+                default:
+                    System.out.println("Pilihan tidak valid");
+                    break;
+            }
+        } while (menu != 0);
     }
 }
